@@ -43,6 +43,15 @@ git remote add origin https://github.com/choompol-drnumnet/CovidNont.git
 ### 2.ติดตั้ง CovidNont
 ![CovidNont](./doc/CovidNont.png)
 
+## Push notification
+[Push Notification](https://expo.io/notifications)
+
+DATA JSON
+
+```
+{"msg": "ASSAAA"}
+```
+
 [CovidNont Expo](https://expo.io/@choompol/CovidNont)
 
 
