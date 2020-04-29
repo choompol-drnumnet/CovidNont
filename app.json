@@ -10,6 +10,14 @@
       "android",
       "web"
     ],
+    "ios": {
+      "bundleIdentifier": "org.edipa.CovidNont",
+      "buildNumber": "1.0.2"
+    },
+    "android": {
+      "package": "org.edipa.CovidNont",
+      "versionCode": 2
+    },
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
