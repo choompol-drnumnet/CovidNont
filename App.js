@@ -31,17 +31,6 @@ const newAppId = () => {
   return "CVN-"+tmst;
 }
 
-const initDb = async (tx) => {
-  const aid = newAppId();
-  console.log("INIT DB");
-  //let r1 = await tx.executeSql('drop table if exists tb1');
-  let r1 = await tx.executeSql('delete from tb1');
-  let r2 = await tx.executeSql('create table if not exists tb1(name varchar(80), phone varchar(15), fever numeric(6,2), staff char(1))');
-  let r3 = await tx.executeSql("insert into tb1(name,phone,fever,staff,appid) values('A','A','A','A')");
-  let r4 = await tx.executeSql("select name,phone,fever,staff from tb1");
-  console.log("INITING", r1, r2, r3,r4);
-};
-
 const App = () => {
   const [expTok, setExpTok] = useState('');
   const [notify, setNotify] = useState('');
@@ -59,8 +48,9 @@ const App = () => {
   const [wrongPhone, setWrongPhone] = useState(false);
   const [wrongFever, setWrongFever] = useState(false);
   const [wrongStaff, setWrongStaff] = useState(false);
-
-  const [stType, setStType] = useState('');
+  const mgtop = 5;
+  const hgtxt = (hg*7/100);
+  const pos01 = (hg*38/100);
 
   const regExpNotify = async () => {
     if (Constants.isDevice) {
@@ -91,23 +81,25 @@ const App = () => {
       });
     }
   };
-  const mgtop = 5;
-  const hgtxt = (hg*7/100);
-  const pos01 = (hg*38/100);
+
   const expNotify = (n) => {
     Vibration.vibrate();
     setNotify(n.data.msg);
   };
+
   useEffect(() => {
     regExpNotify();
     const expNotSub = Notifications.addListener(expNotify);
   },[]);
-  //========== BARCODE CAMERA PREP
+
   useEffect(() => {
+    //========== BARCODE CAMERA PREP
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
       setHasPermission(status === 'granted');
     })();
+
+    //========== DATABASE PREP
     let s1 = "select name,phone,fever,staff,appid from "+tbnm;
     db.transaction(tx => {
       tx.executeSql(s1, [], (_, { rows }) => {
@@ -170,7 +162,7 @@ const App = () => {
         });
       });
      }
-  },[pname,phone,pfever,pstaff]);
+  }, [pname,phone,pfever,pstaff]);
 
   let fgSnd = 0;
 
