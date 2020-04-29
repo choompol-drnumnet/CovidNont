@@ -37,6 +37,7 @@ git remote add origin https://github.com/choompol-drnumnet/CovidNont.git
 
 #### กรณีของ Android
 [Expo-client for PlayStore:](http://bit.ly/2bZq5ew)
+
 ![](./doc/Expo-client-PlayStore.png)
 
 ### 2.ติดตั้ง CovidNont
