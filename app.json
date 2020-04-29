@@ -1,0 +1,17 @@
+{
+  "name": "CovidNont",
+  "displayName": "CovidNont",
+  "expo": {
+    "name": "CovidNont",
+    "slug": "CovidNont",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
