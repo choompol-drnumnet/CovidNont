@@ -4,14 +4,23 @@
   "expo": {
     "name": "CovidNont",
     "slug": "CovidNont",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
   }
 }

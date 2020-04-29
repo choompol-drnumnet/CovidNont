@@ -3,7 +3,7 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 import {useState,useEffect} from 'react';
 import { Button, Vibration, Dimensions } from 'react-native';
 import { Image, ImageBackground, TextInput } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
@@ -77,7 +77,7 @@ const App = () => {
         return;
       }
       let tok0 = await Notifications.getExpoPushTokenAsync();
-      console.log(tok0);
+      console.log("PUSH :"+tok0);
       setExpTok(tok0);
     } else {
       alert('Must use physical device for Push Notifications');
@@ -195,9 +195,9 @@ const App = () => {
     //console.log("APPID", appId);
     let url = u0 + "?COMPANYCODE=" + cd + "&NAME="+ nm
        + "&PHONE="+ ph + "&TYPE=" + tp + "&TEMP="+ fe 
-       + "APPID="+appId;
+       + "&APPID="+appId+ "&TOKEN="+ expTok;
 
-    //console.log("URL:",url);
+    console.log("URL:",url);
     fetch(url, { method: 'GET', }) 
     .then((resp) => {
       fgSnd = 0;
@@ -224,6 +224,10 @@ const App = () => {
       }}>
       {mode===1 &&
 
+      <KeyboardAvoidingView 
+        style={{width: '100%', alignItems: 'center'}}
+        behavior="padding" enabled
+      >
       <View style={{
         marginTop: pos01,
         height: '57%',
@@ -417,6 +421,7 @@ const App = () => {
         </View>}
 
       </View>
+      </KeyboardAvoidingView>
       }
       {mode==2 && 
       <View style={{
