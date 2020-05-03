@@ -54,4 +54,5 @@ DATA JSON
 
 [CovidNont Expo](https://expo.io/@choompol/CovidNont)
 
+[TEST1](exp://192.168.2.122:19000)
 
