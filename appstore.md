@@ -4,7 +4,9 @@ Those information is used only for monitoring the status of Covid-19 spread in N
 The privacy policy is [here](policy).
 
 This is QRcode that shops/services providers have.
+
 ![](./doc/0b3b5ca2ee682bd53df971bca50886cf.png)
+
 
 [The video how the use](./doc/use-video-20200504-a.mov)
 
