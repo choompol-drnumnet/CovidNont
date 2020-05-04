@@ -4,6 +4,7 @@ Those information is used only for monitoring the status of Covid-19 spread in N
 The privacy policy is [here](policy).
 
 ---
-by [Nonthaburi Provincial Public Health Office](https://ssjnonthaburi.moph.go.th/nont/)
-Bang Krasaw, Mueang Nonthaburi District, Nonthaburi 11000
+by [Nonthaburi Provincial Public Health Office](https://ssjnonthaburi.moph.go.th/nont/)<br>
+https://ssjnonthaburi.moph.go.th/nont/</br>
+Bang Krasaw, Mueang Nonthaburi District, Nonthaburi 11000<br>
 TEL: 02 950 3071
