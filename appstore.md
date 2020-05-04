@@ -3,7 +3,7 @@ CovidNont is an mobile app developed by Nanthaburi provincial public health offi
 Those information is used only for monitoring the status of Covid-19 spread in Nonthaburi province for public benefit.
 The privacy policy is [here](policy).
 
-This is QRcode that shops/services providers have.
+This is QRcode samples that shops/services providers have.
 
 ![](./doc/0b3b5ca2ee682bd53df971bca50886cf.png)
 
